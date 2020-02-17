@@ -67,6 +67,8 @@ class RestClient extends BaseAdapter
             self::OPTION_TOKEN    => $this->getConnection()->getToken(),
         ];
 
+        $response = null;
+
         $promise = $this->getClient()->postAsync(null, [
             'form_params' => array_merge($configuration, $arguments)
         ])->then(function ($res)use(&$response){
