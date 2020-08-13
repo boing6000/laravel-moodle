@@ -93,7 +93,8 @@ class RestClient extends BaseAdapter
     {
         return new HttpClient([
             'base_url' => $this->getEndPoint(),
-            'base_uri' => $this->getEndPoint()
+            'base_uri' => $this->getEndPoint(),
+            'verify' => false,
         ]);
 }
 
